@@ -1,4 +1,18 @@
 site_name: ThinkData
 site_url: https://docs.thinkdata.dev
 theme:
+  # name: readthedocs
   name: material
+  custom_dir: overrides
+plugins: 
+  - search
+  - blog
+  # - meta
+  
+  
+nav:
+  - Home: index.md
+  - test: test.md
+  - Aboud: about.md  
+  - Blog:
+    - blog/index.md
