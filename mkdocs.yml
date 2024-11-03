@@ -12,8 +12,6 @@ site_description: >-
 # Copyright
 copyright: Copyright &copy; 2024 - 2024 thinkdata
 
-extra_files:
-  - CNAME
 
 theme:
   name: material
