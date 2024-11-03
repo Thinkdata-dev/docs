@@ -164,6 +164,7 @@ Material for MkDocs can be directly used from [GitHub] by cloning the
 repository into a subfolder of your project root which might be useful if you
 want to use the very latest version:
 한글도 잘 나와야 할텐데?? 검색도 되나요?
+잘 되더라고..
 
 ```
 git clone https://github.com/squidfunk/mkdocs-material.git
