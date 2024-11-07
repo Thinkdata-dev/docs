@@ -275,3 +275,6 @@ nav:
       - insiders/community-experts-program/index.md
   - Blog:
     - blog/index.md
+  - Favorites:
+      - Database: favorites/database.md
+      - Write: favorites/write.md
