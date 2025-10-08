@@ -1,5 +1,5 @@
 ---
-date: 2025-10-08
+date: 2025-10-08 13:00:00
 title: "REST API vs GraphQL: 어떤 것을 선택해야 할까?"
 description: "REST API와 GraphQL의 개념과 차이점을 비교하고, 각각의 장단점과 사용 사례를 코드 예제와 함께 알아봅니다. 프로젝트 특성에 맞는 API 기술 선택 가이드를 제공합니다."
 categories:
