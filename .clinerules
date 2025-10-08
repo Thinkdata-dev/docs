@@ -1,0 +1,48 @@
+# Thinkdata Docs Blog 프로젝트
+
+## 프로젝트 개요
+- MkDocs Material 기반 기술 블로그
+- n8n과 Claude API로 자동 포스팅
+- GitHub Pages 배포
+
+## 기술 스택
+- MkDocs Material
+- Markdown
+- Python (MkDocs 빌드)
+- GitHub Actions
+- n8n (워크플로우 자동화)
+
+## 프로젝트 구조
+## 코딩 가이드라인
+
+### 블로그 포스트 작성 시
+- 모든 포스트는 `docs/blog/posts/` 디렉토리에 위치
+- 파일명 형식: `YYYY-MM-DD-slug.md`
+- Front Matter 필수 항목:
+  - date: YYYY-MM-DD
+  - title: "제목"
+  - categories: [카테고리]
+  - tags: [태그들]
+
+### 포스트 템플릿
+```markdown
+---
+date: 2025-01-10
+title: "포스트 제목"
+description: "간단한 설명"
+categories:
+  - Technology
+tags:
+  - python
+  - tutorial
+---
+
+# 포스트 제목
+
+요약 또는 도입부
+
+<!-- more -->
+
+## 본문 시작
+
+...
