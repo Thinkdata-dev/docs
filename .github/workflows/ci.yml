@@ -29,4 +29,5 @@ jobs:
           pip install mkdocs-material
           pip install mkdocs-material-extensions
           pip install mkdocs-minify-plugin
+          pip install mkdocs-rss-plugin
       - run: mkdocs gh-deploy --force
