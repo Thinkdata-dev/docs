@@ -80,6 +80,13 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/Thinkdata-dev
+      name: GitHub
+    - icon: fontawesome/solid/rss
+      link: /blog/
+      name: RSS Feed
+    - icon: fontawesome/solid/envelope
+      link: mailto:contact@thinkdata.dev
+      name: Contact
 
 extra_css:
   - stylesheets/extra.css

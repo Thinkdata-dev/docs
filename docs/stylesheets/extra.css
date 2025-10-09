@@ -337,7 +337,7 @@ article .md-tag:hover,
   --vercel-header-fg: #666666;
   --vercel-header-active: #000000;
   --vercel-header-hover: #000000;
-  --vercel-border: #eaeaea;
+  --vercel-border: #d0d7de;
   --vercel-accent: #0070f3;
 }
 
@@ -469,109 +469,150 @@ article .md-tag:hover,
 }
 
 /* ========================================
-   검색 박스 - Vercel 스타일
+   검색 박스 - 깔끔한 스타일
    ======================================== */
+
+/* 검색 폼 컨테이너 */
+.md-header .md-search__form {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
 
 /* 헤더 내 검색창 */
 .md-header .md-search__input {
-  background-color: rgba(0, 0, 0, 0.03);
-  border: none;
-  border-radius: 8px;
-  color: var(--vercel-header-active);
-  padding-left: 48px;
-  transition: all 0.2s ease;
-  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.02) !important;
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+  border-radius: 6px !important;
+  color: #000000 !important;
+  padding: 0 12px 0 40px !important;
+  font-size: 14px !important;
+  height: 36px !important;
+  line-height: normal !important;
+  box-sizing: border-box !important;
 }
 
 .md-header .md-search__input:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.12) !important;
+  border-color: rgba(0, 0, 0, 0.2) !important;
 }
 
 .md-header .md-search__input:focus {
-  background-color: #ffffff;
-  border: 1px solid var(--vercel-header-active);
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
-  color: var(--vercel-header-active);
-  outline: none;
+  background-color: #ffffff !important;
+  border-color: #0969da !important;
+  box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.1) !important;
+  outline: none !important;
 }
 
 .md-header .md-search__input::placeholder {
-  color: var(--vercel-header-fg);
-  opacity: 0.6;
+  color: #666666 !important;
+  opacity: 1 !important;
 }
 
-/* 검색 아이콘 */
-.md-search__icon {
-  color: var(--vercel-header-fg);
-  opacity: 0.6;
+/* 돋보기 아이콘 (왼쪽) */
+.md-header .md-search__icon[for="__search"] {
+  color: #666666 !important;
+  opacity: 1 !important;
+  left: 10px !important;
+  width: 20px !important;
+  height: 20px !important;
+  display: block !important;
 }
 
-.md-search__icon[for="__search"] {
-  color: var(--vercel-header-fg);
-  opacity: 0.6;
+.md-header .md-search__icon[for="__search"] svg {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+/* 우측 아이콘들 숨김 */
+.md-search__options {
+  display: none !important;
+}
+
+.md-search-result__article::before {
+  display: none !important;
 }
 
 /* Dark 모드 검색창 */
 [data-md-color-scheme="slate"] .md-header .md-search__input {
-  background-color: rgba(255, 255, 255, 0.08);
-  border: none;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
 }
 
 [data-md-color-scheme="slate"] .md-header .md-search__input:hover {
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
 }
 
 [data-md-color-scheme="slate"] .md-header .md-search__input:focus {
-  background-color: rgba(255, 255, 255, 0.15);
-  border: 1px solid var(--vercel-header-active);
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.12) !important;
+  border-color: #58a6ff !important;
+  box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.2) !important;
+}
+
+[data-md-color-scheme="slate"] .md-header .md-search__input::placeholder {
+  color: #888888 !important;
+}
+
+[data-md-color-scheme="slate"] .md-header .md-search__icon[for="__search"],
+[data-md-color-scheme="slate"] .md-header .md-search__icon {
+  color: #888888 !important;
 }
 
 /* 검색 오버레이 전체 */
 .md-search__overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  opacity: 1;
 }
 
 /* 검색 입력창 (확대된 상태) */
 .md-search__form {
   background-color: var(--gh-canvas-default);
-  border: none;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--vercel-border);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
   border-radius: 12px;
+  overflow: hidden;
 }
 
 [data-md-color-scheme="slate"] .md-search__form {
   background-color: var(--gh-canvas-default);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--vercel-border);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
 }
 
-/* 검색 결과 팝업 */
+/* 검색 결과 팝업 - 배경색 추가 */
 .md-search__output {
-  background-color: transparent;
+  background-color: var(--gh-canvas-default);
   border-radius: 0 0 12px 12px;
   box-shadow: none;
   border: none;
 }
 
 .md-search-result {
-  background-color: transparent;
+  background-color: var(--gh-canvas-default);
 }
 
 .md-search-result__meta {
-  background-color: transparent;
+  background-color: var(--gh-canvas-subtle);
   color: var(--vercel-header-fg);
   font-size: 13px;
-  padding: 16px 20px;
+  padding: 12px 20px;
   border-bottom: 1px solid var(--vercel-border);
+  font-weight: 500;
 }
 
 .md-search-result__list {
-  background-color: transparent;
+  background-color: var(--gh-canvas-default);
+  max-height: 400px;
+  overflow-y: auto;
 }
 
 .md-search-result__item {
   border-bottom: 1px solid var(--vercel-border);
+  background-color: var(--gh-canvas-default);
 }
 
 .md-search-result__item:last-child {
@@ -580,12 +621,14 @@ article .md-tag:hover,
 
 .md-search-result__link {
   color: var(--gh-fg-default);
-  padding: 12px 20px;
+  padding: 14px 20px;
   transition: background-color 0.15s ease;
+  display: block;
+  background-color: var(--gh-canvas-default);
 }
 
 .md-search-result__link:hover {
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: var(--gh-canvas-subtle);
 }
 
 [data-md-color-scheme="slate"] .md-search-result__link:hover {
@@ -598,9 +641,10 @@ article .md-tag:hover,
 
 .md-search-result__title {
   color: var(--vercel-header-active);
-  font-weight: 500;
+  font-weight: 600;
   font-size: 15px;
   line-height: 1.4;
+  margin-bottom: 4px;
 }
 
 .md-search-result__teaser {
@@ -612,13 +656,14 @@ article .md-tag:hover,
 
 /* 검색 입력 필드 (확대된 상태) */
 .md-search__inner .md-search__input {
-  background-color: transparent;
+  background-color: var(--gh-canvas-default);
   border: none;
   border-bottom: 1px solid var(--vercel-border);
   border-radius: 12px 12px 0 0;
   color: var(--vercel-header-active);
   font-size: 16px;
-  padding: 16px 20px;
+  padding: 18px 20px 18px 48px;
+  height: auto;
 }
 
 .md-search__inner .md-search__input:focus {
@@ -628,18 +673,46 @@ article .md-tag:hover,
 
 .md-search__inner .md-search__input::placeholder {
   color: var(--vercel-header-fg);
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 /* 검색 아이콘 (확대된 상태) */
 .md-search__inner .md-search__icon {
   color: var(--vercel-header-fg);
+  opacity: 0.6;
+  left: 16px;
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.md-search__inner .md-search__icon svg {
+  width: 22px;
+  height: 22px;
 }
 
 /* 스크롤바 */
 .md-search__scrollwrap {
-  background-color: transparent;
+  background-color: var(--gh-canvas-default);
   border-radius: 0 0 12px 12px;
+}
+
+/* 검색 결과 스크롤바 스타일 */
+.md-search-result__list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.md-search-result__list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.md-search-result__list::-webkit-scrollbar-thumb {
+  background-color: var(--gh-border-muted);
+  border-radius: 4px;
+}
+
+.md-search-result__list::-webkit-scrollbar-thumb:hover {
+  background-color: var(--gh-fg-muted);
 }
 
 /* ========================================
@@ -669,21 +742,97 @@ article .md-tag:hover,
 }
 
 .md-footer-meta {
-  background-color: var(--gh-canvas-default);
-  color: var(--gh-fg-muted);
+  background-color: var(--gh-canvas-subtle);
+  color: var(--gh-fg-muted) !important;
 }
 
 .md-footer-meta__inner {
-  color: var(--gh-fg-muted);
+  color: var(--gh-fg-muted) !important;
+}
+
+/* 푸터 copyright 텍스트 명확한 색상 지정 */
+.md-copyright,
+.md-copyright__highlight,
+.md-footer-meta .md-typeset,
+.md-footer-meta p {
+  color: var(--gh-fg-muted) !important;
+}
+
+/* 푸터 copyright 내 링크 색상 */
+.md-copyright a,
+.md-copyright__highlight a {
+  color: var(--gh-fg-muted) !important;
+  text-decoration: underline;
+}
+
+.md-copyright a:hover,
+.md-copyright__highlight a:hover {
+  color: var(--gh-accent-fg) !important;
+}
+
+/* Light 모드에서 copyright 텍스트 색상 강제 적용 */
+[data-md-color-scheme="default"] .md-footer-meta,
+[data-md-color-scheme="default"] .md-footer-meta__inner,
+[data-md-color-scheme="default"] .md-copyright,
+[data-md-color-scheme="default"] .md-copyright__highlight {
+  color: #57606a !important;  /* GitHub light 모드의 muted 색상 */
+}
+
+[data-md-color-scheme="default"] .md-copyright a,
+[data-md-color-scheme="default"] .md-copyright__highlight a {
+  color: #57606a !important;  /* GitHub light 모드의 muted 색상 */
+}
+
+[data-md-color-scheme="default"] .md-copyright a:hover,
+[data-md-color-scheme="default"] .md-copyright__highlight a:hover {
+  color: #0969da !important;  /* GitHub light 모드의 accent 색상 */
+}
+
+/* Dark 모드 copyright 텍스트 */
+[data-md-color-scheme="slate"] .md-copyright,
+[data-md-color-scheme="slate"] .md-copyright__highlight,
+[data-md-color-scheme="slate"] .md-footer-meta .md-typeset,
+[data-md-color-scheme="slate"] .md-footer-meta p {
+  color: var(--gh-fg-muted) !important;
+}
+
+[data-md-color-scheme="slate"] .md-copyright a,
+[data-md-color-scheme="slate"] .md-copyright__highlight a {
+  color: var(--gh-fg-muted) !important;
+}
+
+[data-md-color-scheme="slate"] .md-copyright a:hover,
+[data-md-color-scheme="slate"] .md-copyright__highlight a:hover {
+  color: var(--gh-accent-fg) !important;
 }
 
 /* 푸터 소셜 아이콘 */
 .md-footer .md-social__link {
-  color: var(--gh-fg-muted);
+  color: var(--gh-fg-muted) !important;
+  transition: all 0.2s ease;
 }
 
 .md-footer .md-social__link:hover {
-  color: var(--gh-accent-fg);
+  color: var(--gh-accent-fg) !important;
+  transform: translateY(-2px);
+}
+
+/* Light 모드 소셜 아이콘 */
+[data-md-color-scheme="default"] .md-footer .md-social__link {
+  color: #57606a !important;
+}
+
+[data-md-color-scheme="default"] .md-footer .md-social__link:hover {
+  color: #0969da !important;
+}
+
+/* Dark 모드 소셜 아이콘 */
+[data-md-color-scheme="slate"] .md-footer .md-social__link {
+  color: var(--gh-fg-muted) !important;
+}
+
+[data-md-color-scheme="slate"] .md-footer .md-social__link:hover {
+  color: var(--gh-accent-fg) !important;
 }
 
 /* ========================================
