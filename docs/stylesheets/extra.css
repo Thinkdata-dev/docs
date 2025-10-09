@@ -491,11 +491,15 @@ article .md-tag:hover,
   fill: var(--vercel-header-fg);
 }
 
-/* 로고 색상 */
-.md-logo img,
-.md-logo svg {
-  fill: var(--vercel-header-active);
-  color: var(--vercel-header-active);
+/* 로고 이미지 전환 - Light/Dark 모드 */
+/* Light 모드: 기본 logo.svg (검은색) */
+.md-logo img {
+  content: url('../assets/logo.svg');
+}
+
+/* Dark 모드: logo-dark.svg (흰색)로 전환 */
+[data-md-color-scheme="slate"] .md-logo img {
+  content: url('../assets/logo-dark.svg');
 }
 
 /* Vercel 스타일 아이콘 버튼 */
