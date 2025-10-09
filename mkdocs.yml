@@ -60,7 +60,7 @@ plugins:
       post_date_format: full
       post_url_format: "{slug}"
       authors_file: "{blog}/.authors.yml"
-  - tags
+  - material/tags: {}
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
       lang:
