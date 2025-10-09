@@ -13,11 +13,11 @@ links:
   - insiders/how-to-sponsor.md
 ---
 
-# Chinese search support – 中文搜索​支持
-
-__Insiders adds experimental Chinese language support for the [built-in search
+Insiders adds experimental Chinese language support for the [built-in search
 plugin] – a feature that has been requested for a long time given the large
-number of Chinese users.__
+number of Chinese users.
+
+<!-- more -->
 
 After the United States and Germany, the third-largest country of origin of
 Material for MkDocs users is China. For a long time, the [built-in search plugin]
@@ -25,8 +25,6 @@ didn't allow for proper segmentation of Chinese characters, mainly due to
 missing support in [lunr-languages] which is used for search tokenization and
 stemming. The latest Insiders release adds long-awaited Chinese language support
 for the built-in search plugin, something that has been requested by many users.
-
-<!-- more -->
 
 _Material for MkDocs終於​支持​中文​了！文本​被​正確​分割​並且​更​容易​找到。_
 { style="display: inline" }

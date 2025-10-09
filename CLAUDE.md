@@ -282,6 +282,11 @@ markdownlint docs/**/*.md
 
 ## Claude Code 사용 예시
 
+## 개발 환경 설정
+
+로컬 개발을 시작하기 전에 Python 가상환경(venv)을 설정하세요. 자세한 단계는 `VENV_SETUP.md` 파일을 참고하세요.
+
+
 ### 새 포스트 작성
 ```bash
 claude "Python type hints에 대한 초보자용 튜토리얼을 작성해줘.

@@ -1,15 +1,20 @@
 ---
 date: 2023-10-02
 authors: [squidfunk, alexvoss]
+title: "Sunsetting Gitter: Towards Efficient Community Engagement"
+description: >
+  As we're starting to build a team around Material for MkDocs, we've decided to
+  sunset and archive our Gitter channel on October 13, 2023 in favor of
+  GitHub Discussions
 categories:
   - General
 ---
 
-# Sunsetting Gitter: Towards Efficient Community Engagement
-
-__As we're starting to build a team around Material for MkDocs, we've decided to
+As we're starting to build a team around Material for MkDocs, we've decided to
 sunset and archive our [Gitter] channel on October 13, 2023 in favor of
-[GitHub Discussions].__
+[GitHub Discussions].
+
+<!-- more -->
 
 As part of our efforts to improve the processes for maintaining Material for
 MkDocs and for supporting the community, we have reviewed the use of different
@@ -20,8 +25,6 @@ interest of our project. This post explains the rationale behind our decision.
 
   [Gitter]: https://gitter.im/squidfunk/mkdocs-material
   [GitHub discussions]: https://github.com/squidfunk/mkdocs-material/discussions
-
-<!-- more -->
 
 ## The Constraints of Gitter
 

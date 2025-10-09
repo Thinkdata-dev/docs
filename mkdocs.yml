@@ -15,11 +15,15 @@ theme:
     - content.action.view
     - content.code.annotate
     - content.code.copy
+    - content.code.select
     - content.tooltips
     - navigation.footer
     - navigation.indexes
+    - navigation.instant
+    - navigation.instant.progress
     - navigation.sections
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.top
     - navigation.tracking
     - search.highlight
@@ -27,35 +31,42 @@ theme:
     - search.suggest
     - toc.follow  
   palette:
-    - media: "(prefers-color-scheme)"
-      toggle:
-        icon: material/link
-        name: Switch to light mode
+    # Light mode - GitHub style
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: white
+      accent: blue
       toggle:
-        icon: material/toggle-switch
-        name: Switch to dark mode
+        icon: material/weather-night
+        name: 다크 모드로 전환
+    # Dark mode - GitHub dark
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
-      accent: indigo
+      accent: blue
       toggle:
-        icon: material/toggle-switch-off
-        name: Switch to system preference
+        icon: material/weather-sunny
+        name: 라이트 모드로 전환
   font:
-    text: Roboto
-    code: Roboto Mono
+    text: Inter
+    code: Fira Code
   favicon: assets/favicon.png
   icon:
     logo: logo    
 # Plugins
 plugins:
-  - blog
+  - blog:
+      blog_toc: true
+      post_date_format: full
+      post_url_format: "{slug}"
+      authors_file: "{blog}/.authors.yml"
+  - tags:
+      tags_file: blog/tags.md
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+      lang:
+        - en
+        - ko
   - minify:
       minify_html: true
 
@@ -69,6 +80,9 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/Thinkdata-dev
+
+extra_css:
+  - stylesheets/extra.css
 
 # Extensions
 markdown_extensions:
@@ -129,6 +143,7 @@ nav:
   - Home: index.md
   - Blog:
     - blog/index.md
+  - Tags: blog/tags.md
   - Favorites:
     - Database: favorites/database.md
     - Write: favorites/write.md

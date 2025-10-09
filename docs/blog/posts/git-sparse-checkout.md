@@ -1,6 +1,11 @@
 ---
 date: 2023-09-22
 authors: [squidfunk]
+title: Using `git sparse-checkout` for faster documentation builds
+description: >
+  Leveraging `git sparse-checkout` in GitHub Actions enabled us to speed up
+  documentation builds in our repository, cutting checkout times from 20 to 30
+  seconds to just 2 seconds
 categories:
   - Build
   - Performance
@@ -9,11 +14,11 @@ links:
   - creating-your-site.md#building-your-site
 ---
 
-# Using `git sparse-checkout` for faster documentation builds
-
-__Leveraging `git sparse-checkout` in GitHub Actions enabled us to speed up
+Leveraging `git sparse-checkout` in GitHub Actions enabled us to speed up
 documentation builds in our repository, cutting checkout times from 20 to 30
-seconds to just 2 seconds.__
+seconds to just 2 seconds.
+
+<!-- more -->
 
 Developing an efficient approach to build documentation in CI workflows is
 essential, especially when working in large repositories with thousands of
@@ -32,8 +37,6 @@ check out time was brought down to 2 seconds.
   [git-committers]: https://github.com/ojacques/mkdocs-git-committers-plugin-2
   [document contributors]: ../../setup/adding-a-git-repository.md#document-contributors
   [dates]: ../../setup/adding-a-git-repository.md#document-dates
-
-<!-- more -->
 
 ## A Primer
 

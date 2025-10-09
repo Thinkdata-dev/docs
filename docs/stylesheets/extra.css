@@ -1,0 +1,938 @@
+/*
+ * Thinkdata 블로그 커스텀 스타일
+ * GitHub 스타일 디자인 시스템
+ */
+
+/* ========================================
+   GitHub Design System - 색상 변수
+   ======================================== */
+
+:root {
+  /* Light mode - GitHub colors */
+  --gh-border-default: #d0d7de;
+  --gh-border-muted: #d8dee4;
+  --gh-canvas-default: #ffffff;
+  --gh-canvas-subtle: #f6f8fa;
+  --gh-fg-default: #24292f;
+  --gh-fg-muted: #57606a;
+  --gh-accent-fg: #0969da;
+  --gh-accent-emphasis: #0969da;
+  --gh-danger-fg: #cf222e;
+  --gh-success-fg: #1a7f37;
+  --gh-shadow-small: 0 1px 0 rgba(27,31,36,0.04);
+  --gh-shadow-medium: 0 3px 6px rgba(140,149,159,0.15);
+  --gh-shadow-large: 0 8px 24px rgba(140,149,159,0.2);
+  --gh-border-radius: 6px;
+}
+
+/* ========================================
+   스크롤바 레이아웃 안정화 (메뉴 클릭 시 흔들림 방지)
+   ======================================== */
+
+html {
+  /* 스크롤바 공간을 항상 예약하여 레이아웃 이동 방지 */
+  scrollbar-gutter: stable;
+  overflow-y: scroll;
+}
+
+[data-md-color-scheme="slate"] {
+  /* Dark mode - GitHub dark colors */
+  --gh-border-default: #30363d;
+  --gh-border-muted: #21262d;
+  --gh-canvas-default: #0d1117;
+  --gh-canvas-subtle: #161b22;
+  --gh-fg-default: #c9d1d9;
+  --gh-fg-muted: #8b949e;
+  --gh-accent-fg: #58a6ff;
+  --gh-accent-emphasis: #1f6feb;
+  --gh-danger-fg: #f85149;
+  --gh-success-fg: #3fb950;
+  --gh-shadow-small: 0 0 transparent;
+  --gh-shadow-medium: 0 3px 6px rgba(0,0,0,0.3);
+  --gh-shadow-large: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+/* ========================================
+   타이포그래피 - GitHub 스타일
+   ======================================== */
+
+.md-typeset {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--gh-fg-default);
+}
+
+.md-typeset h1 {
+  font-weight: 600;
+  font-size: 2em;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--gh-border-muted);
+  line-height: 1.25;
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+  font-size: 1.5em;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--gh-border-muted);
+  line-height: 1.25;
+}
+
+.md-typeset h3 {
+  font-weight: 600;
+  font-size: 1.25em;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  line-height: 1.25;
+}
+
+.md-typeset h4 {
+  font-weight: 600;
+  font-size: 1em;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.md-typeset p {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+/* ========================================
+   블로그 카드 스타일 - Vercel 스타일
+   ======================================== */
+
+/* 블로그 포스트 카드 */
+.md-typeset article.blog-post {
+  background: transparent;
+  border: 1px solid var(--vercel-border);
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 24px;
+  transition: all 0.2s ease;
+}
+
+.md-typeset article.blog-post:hover {
+  border-color: var(--vercel-header-active);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+[data-md-color-scheme="slate"] .md-typeset article.blog-post:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* 블로그 메타 정보 */
+.md-typeset .blog-post .md-meta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: var(--vercel-header-fg);
+  font-weight: 400;
+}
+
+/* ========================================
+   코드 블록 스타일링 - GitHub 스타일
+   ======================================== */
+
+/* 코드 블록 컨테이너 */
+.md-typeset pre {
+  background-color: var(--gh-canvas-subtle);
+  border: 1px solid var(--gh-border-default);
+  border-radius: var(--gh-border-radius);
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  margin-bottom: 16px;
+}
+
+.md-typeset pre > code {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  font-size: 100%;
+}
+
+/* 인라인 코드 */
+.md-typeset code {
+  background-color: var(--gh-canvas-subtle);
+  color: var(--gh-fg-default);
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+  border-radius: var(--gh-border-radius);
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+.md-typeset pre code {
+  background-color: transparent;
+}
+
+/* 코드 복사 버튼 */
+.md-clipboard {
+  color: var(--gh-fg-muted);
+}
+
+.md-clipboard:hover {
+  color: var(--gh-accent-fg);
+}
+
+/* ========================================
+   태그 & 카테고리 스타일 - Vercel 스타일
+   ======================================== */
+
+.md-typeset .md-tag,
+.md-typeset a.md-tag,
+article .md-tag,
+.md-meta .md-tag,
+.md-post__meta .md-tag {
+  /* Light 모드: 회색 배경 + 검은색 텍스트 */
+  background-color: #fafafa !important;
+  color: #666666 !important;
+  border: 1px solid var(--vercel-border) !important;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: inline-block;
+  vertical-align: middle;
+  letter-spacing: -0.01em;
+}
+
+.md-typeset .md-tag:hover,
+.md-typeset a.md-tag:hover,
+article .md-tag:hover,
+.md-meta .md-tag:hover,
+.md-post__meta .md-tag:hover {
+  background-color: #f0f0f0 !important;
+  border-color: #d0d0d0 !important;
+  color: #666666 !important;
+  text-decoration: none;
+}
+
+/* Dark 모드 태그 스타일 */
+[data-md-color-scheme="slate"] .md-typeset .md-tag,
+[data-md-color-scheme="slate"] .md-typeset a.md-tag,
+[data-md-color-scheme="slate"] article .md-tag,
+[data-md-color-scheme="slate"] .md-meta .md-tag,
+[data-md-color-scheme="slate"] .md-post__meta .md-tag {
+  background-color: #1a1a1a !important;
+  color: #888888 !important;
+  border-color: var(--vercel-border) !important;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .md-tag:hover,
+[data-md-color-scheme="slate"] .md-typeset a.md-tag:hover,
+[data-md-color-scheme="slate"] article .md-tag:hover,
+[data-md-color-scheme="slate"] .md-meta .md-tag:hover,
+[data-md-color-scheme="slate"] .md-post__meta .md-tag:hover {
+  background-color: #252525 !important;
+  border-color: #444444 !important;
+  color: #888888 !important;
+}
+
+/* ========================================
+   링크 & 버튼 - Vercel 스타일
+   ======================================== */
+
+/* 링크 스타일 */
+.md-typeset a {
+  color: var(--vercel-header-active);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.md-typeset a:hover {
+  opacity: 0.7;
+}
+
+/* Dark 모드 링크 */
+[data-md-color-scheme="slate"] .md-typeset a {
+  color: var(--vercel-header-active);
+}
+
+[data-md-color-scheme="slate"] .md-typeset a:hover {
+  opacity: 0.8;
+}
+
+/* 버튼 스타일 - Vercel 스타일 */
+.md-typeset .md-button {
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  border: 1px solid var(--vercel-border);
+  background-color: transparent;
+  color: var(--vercel-header-active);
+  transition: all 0.2s ease;
+}
+
+.md-typeset .md-button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-color: var(--vercel-header-active);
+  text-decoration: none;
+}
+
+.md-typeset .md-button--primary {
+  background-color: var(--vercel-header-active);
+  border-color: var(--vercel-header-active);
+  color: #ffffff;
+}
+
+.md-typeset .md-button--primary:hover {
+  background-color: #000000;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .md-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ========================================
+   Admonition (알림 박스) - GitHub 스타일
+   ======================================== */
+
+.md-typeset .admonition {
+  border: 1px solid var(--gh-border-default);
+  border-left: 4px solid var(--gh-accent-emphasis);
+  border-radius: var(--gh-border-radius);
+  padding: 16px;
+  margin: 16px 0;
+  background-color: var(--gh-canvas-subtle);
+}
+
+.md-typeset .admonition.note {
+  border-left-color: var(--gh-accent-emphasis);
+}
+
+.md-typeset .admonition.warning {
+  border-left-color: #d29922;
+}
+
+.md-typeset .admonition.danger {
+  border-left-color: var(--gh-danger-fg);
+}
+
+.md-typeset .admonition.success {
+  border-left-color: var(--gh-success-fg);
+}
+
+/* ========================================
+   헤더 & 네비게이션 - Vercel 스타일
+   ======================================== */
+
+/* Vercel 색상 변수 */
+:root {
+  --vercel-header-bg: #ffffff;
+  --vercel-header-fg: #666666;
+  --vercel-header-active: #000000;
+  --vercel-header-hover: #000000;
+  --vercel-border: #eaeaea;
+  --vercel-accent: #0070f3;
+}
+
+[data-md-color-scheme="slate"] {
+  --vercel-header-bg: #000000;
+  --vercel-header-fg: #888888;
+  --vercel-header-active: #ffffff;
+  --vercel-header-hover: #ffffff;
+  --vercel-border: #333333;
+  --vercel-accent: #0070f3;
+}
+
+/* Vercel 스타일 헤더 */
+.md-header {
+  background-color: var(--vercel-header-bg);
+  border-bottom: 1px solid var(--vercel-border);
+  box-shadow: none;
+  color: var(--vercel-header-fg);
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+[data-md-color-scheme="slate"] .md-header {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* 헤더 내 텍스트 색상 - Vercel 스타일 */
+.md-header__title,
+.md-header__button,
+.md-header [data-md-component="logo"],
+.md-header-nav__button {
+  color: var(--vercel-header-fg);
+}
+
+.md-header__title .md-header__ellipsis {
+  color: var(--vercel-header-active);
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+}
+
+/* 헤더 링크 색상 */
+.md-header a {
+  color: var(--vercel-header-fg);
+  transition: color 0.2s ease;
+}
+
+.md-header a:hover {
+  color: var(--vercel-header-hover);
+}
+
+/* Vercel 스타일 탭 */
+.md-tabs {
+  background-color: transparent;
+  border-bottom: 1px solid var(--vercel-border);
+}
+
+.md-tabs__link {
+  color: var(--vercel-header-fg);
+  font-weight: 500;
+  font-size: 14px;
+  transition: color 0.2s ease;
+  border-bottom: 2px solid transparent;
+  padding: 0 16px;
+  letter-spacing: -0.01em;
+}
+
+.md-tabs__link:hover {
+  color: var(--vercel-header-hover);
+}
+
+.md-tabs__link--active {
+  color: var(--vercel-header-active);
+  border-bottom-color: var(--vercel-header-active);
+  font-weight: 500;
+}
+
+/* 사이드바 네비게이션 */
+.md-nav__link {
+  color: var(--gh-fg-default);
+}
+
+.md-nav__link:hover {
+  color: var(--gh-accent-fg);
+}
+
+.md-nav__link--active {
+  color: var(--gh-accent-fg);
+  font-weight: 600;
+}
+
+/* 아이콘 색상 - Vercel 스타일 */
+.md-header__button.md-icon,
+.md-header .md-icon svg {
+  fill: var(--vercel-header-fg);
+  color: var(--vercel-header-fg);
+}
+
+.md-header__button.md-icon:hover,
+.md-header .md-icon:hover svg {
+  fill: var(--vercel-header-hover);
+  color: var(--vercel-header-hover);
+}
+
+/* 다크모드 토글 아이콘 */
+[data-md-color-scheme] .md-header__button.md-icon svg {
+  fill: var(--vercel-header-fg);
+}
+
+/* 로고 색상 */
+.md-logo img,
+.md-logo svg {
+  fill: var(--vercel-header-active);
+  color: var(--vercel-header-active);
+}
+
+/* Vercel 스타일 아이콘 버튼 */
+.md-header__button {
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.md-header__button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-md-color-scheme="slate"] .md-header__button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ========================================
+   검색 박스 - Vercel 스타일
+   ======================================== */
+
+/* 헤더 내 검색창 */
+.md-header .md-search__input {
+  background-color: rgba(0, 0, 0, 0.03);
+  border: none;
+  border-radius: 8px;
+  color: var(--vercel-header-active);
+  padding-left: 48px;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.md-header .md-search__input:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.md-header .md-search__input:focus {
+  background-color: #ffffff;
+  border: 1px solid var(--vercel-header-active);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+  color: var(--vercel-header-active);
+  outline: none;
+}
+
+.md-header .md-search__input::placeholder {
+  color: var(--vercel-header-fg);
+  opacity: 0.6;
+}
+
+/* 검색 아이콘 */
+.md-search__icon {
+  color: var(--vercel-header-fg);
+  opacity: 0.6;
+}
+
+.md-search__icon[for="__search"] {
+  color: var(--vercel-header-fg);
+  opacity: 0.6;
+}
+
+/* Dark 모드 검색창 */
+[data-md-color-scheme="slate"] .md-header .md-search__input {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: none;
+}
+
+[data-md-color-scheme="slate"] .md-header .md-search__input:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+[data-md-color-scheme="slate"] .md-header .md-search__input:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--vercel-header-active);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+/* 검색 오버레이 전체 */
+.md-search__overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+/* 검색 입력창 (확대된 상태) */
+.md-search__form {
+  background-color: var(--gh-canvas-default);
+  border: none;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+}
+
+[data-md-color-scheme="slate"] .md-search__form {
+  background-color: var(--gh-canvas-default);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* 검색 결과 팝업 */
+.md-search__output {
+  background-color: transparent;
+  border-radius: 0 0 12px 12px;
+  box-shadow: none;
+  border: none;
+}
+
+.md-search-result {
+  background-color: transparent;
+}
+
+.md-search-result__meta {
+  background-color: transparent;
+  color: var(--vercel-header-fg);
+  font-size: 13px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--vercel-border);
+}
+
+.md-search-result__list {
+  background-color: transparent;
+}
+
+.md-search-result__item {
+  border-bottom: 1px solid var(--vercel-border);
+}
+
+.md-search-result__item:last-child {
+  border-bottom: none;
+}
+
+.md-search-result__link {
+  color: var(--gh-fg-default);
+  padding: 12px 20px;
+  transition: background-color 0.15s ease;
+}
+
+.md-search-result__link:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+[data-md-color-scheme="slate"] .md-search-result__link:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.md-search-result__article {
+  color: var(--gh-fg-default);
+}
+
+.md-search-result__title {
+  color: var(--vercel-header-active);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.md-search-result__teaser {
+  color: var(--vercel-header-fg);
+  font-size: 13px;
+  line-height: 1.5;
+  margin-top: 4px;
+}
+
+/* 검색 입력 필드 (확대된 상태) */
+.md-search__inner .md-search__input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--vercel-border);
+  border-radius: 12px 12px 0 0;
+  color: var(--vercel-header-active);
+  font-size: 16px;
+  padding: 16px 20px;
+}
+
+.md-search__inner .md-search__input:focus {
+  border-bottom: 1px solid var(--vercel-border);
+  box-shadow: none;
+}
+
+.md-search__inner .md-search__input::placeholder {
+  color: var(--vercel-header-fg);
+  opacity: 0.6;
+}
+
+/* 검색 아이콘 (확대된 상태) */
+.md-search__inner .md-search__icon {
+  color: var(--vercel-header-fg);
+}
+
+/* 스크롤바 */
+.md-search__scrollwrap {
+  background-color: transparent;
+  border-radius: 0 0 12px 12px;
+}
+
+/* ========================================
+   푸터 - GitHub 스타일
+   ======================================== */
+
+.md-footer {
+  background-color: var(--gh-canvas-subtle);
+  border-top: 1px solid var(--gh-border-default);
+  color: var(--gh-fg-default);
+}
+
+.md-footer__inner {
+  color: var(--gh-fg-default);
+}
+
+.md-footer__link {
+  color: var(--gh-fg-default);
+}
+
+.md-footer__link:hover {
+  color: var(--gh-accent-fg);
+}
+
+.md-footer__title {
+  color: var(--gh-fg-default);
+}
+
+.md-footer-meta {
+  background-color: var(--gh-canvas-default);
+  color: var(--gh-fg-muted);
+}
+
+.md-footer-meta__inner {
+  color: var(--gh-fg-muted);
+}
+
+/* 푸터 소셜 아이콘 */
+.md-footer .md-social__link {
+  color: var(--gh-fg-muted);
+}
+
+.md-footer .md-social__link:hover {
+  color: var(--gh-accent-fg);
+}
+
+/* ========================================
+   테이블 스타일 - GitHub 스타일
+   ======================================== */
+
+.md-typeset table:not([class]) {
+  border: 1px solid var(--gh-border-default);
+  border-collapse: collapse;
+  border-radius: var(--gh-border-radius);
+  display: block;
+  max-width: 100%;
+  overflow: auto;
+  margin: 16px 0;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--gh-canvas-subtle);
+  border: 1px solid var(--gh-border-default);
+  padding: 6px 13px;
+  font-weight: 600;
+}
+
+.md-typeset table:not([class]) td {
+  border: 1px solid var(--gh-border-default);
+  padding: 6px 13px;
+}
+
+.md-typeset table:not([class]) tr {
+  background-color: var(--gh-canvas-default);
+  border-top: 1px solid var(--gh-border-default);
+}
+
+.md-typeset table:not([class]) tr:nth-child(2n) {
+  background-color: var(--gh-canvas-subtle);
+}
+
+/* ========================================
+   리스트 스타일 - GitHub 스타일
+   ======================================== */
+
+.md-typeset ul,
+.md-typeset ol {
+  margin-top: 0;
+  margin-bottom: 16px;
+  padding-left: 2em;
+}
+
+.md-typeset ul ul,
+.md-typeset ul ol,
+.md-typeset ol ol,
+.md-typeset ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.md-typeset li + li {
+  margin-top: 0.25em;
+}
+
+/* ========================================
+   인용문 스타일 - GitHub 스타일
+   ======================================== */
+
+.md-typeset blockquote {
+  margin: 0 0 16px 0;
+  padding: 0 1em;
+  color: var(--gh-fg-muted);
+  border-left: 0.25em solid var(--gh-border-default);
+}
+
+/* ========================================
+   수평선 - GitHub 스타일
+   ======================================== */
+
+.md-typeset hr {
+  height: 0.25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: var(--gh-border-default);
+  border: 0;
+}
+
+/* ========================================
+   목차 (TOC) 스타일
+   ======================================== */
+
+.md-nav--secondary .md-nav__title {
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--gh-fg-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.md-nav--secondary .md-nav__link {
+  font-size: 14px;
+  color: var(--gh-fg-default);
+}
+
+.md-nav--secondary .md-nav__link--active {
+  color: var(--gh-accent-fg);
+  font-weight: 600;
+}
+
+/* ========================================
+   스크롤바 - GitHub 스타일
+   ======================================== */
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gh-canvas-default);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--gh-border-muted);
+  border-radius: 6px;
+  border: 3px solid var(--gh-canvas-default);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--gh-fg-muted);
+}
+
+/* ========================================
+   반응형 디자인
+   ======================================== */
+
+@media screen and (max-width: 76.1875em) {
+  .md-typeset {
+    font-size: 16px;
+  }
+
+  .md-typeset article.blog-post {
+    padding: 16px;
+  }
+}
+
+@media screen and (max-width: 44.9375em) {
+  .md-typeset {
+    font-size: 14px;
+  }
+
+  .md-typeset h1 {
+    font-size: 1.75em;
+  }
+
+  .md-typeset h2 {
+    font-size: 1.5em;
+  }
+
+  .md-typeset pre {
+    padding: 12px;
+  }
+}
+
+/* ========================================
+   추가 개선사항
+   ======================================== */
+
+/* 이미지 스타일 */
+.md-typeset img {
+  max-width: 100%;
+  border-radius: var(--gh-border-radius);
+  margin: 16px 0;
+}
+
+/* 읽기 시간 표시 */
+.md-typeset .blog-post .reading-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--gh-fg-muted);
+  font-size: 14px;
+}
+
+/* 포커스 스타일 */
+*:focus-visible {
+  outline: 2px solid var(--gh-accent-fg);
+  outline-offset: 2px;
+}
+
+/* 선택 영역 스타일 */
+::selection {
+  background-color: var(--gh-accent-emphasis);
+  color: #ffffff;
+}
+
+/* 코드 선택 영역 */
+.md-typeset pre code::selection {
+  background-color: rgba(9, 105, 218, 0.3);
+}
+
+/* ========================================
+   사이드바 & 네비게이션 드로어
+   ======================================== */
+
+.md-sidebar {
+  background-color: var(--gh-canvas-default);
+}
+
+.md-nav__title {
+  color: var(--gh-fg-default);
+  font-weight: 600;
+}
+
+.md-nav__item--nested > .md-nav__link {
+  color: var(--gh-fg-default);
+}
+
+/* 네비게이션 토글 */
+.md-nav__toggle ~ label {
+  color: var(--gh-fg-default);
+}
+
+/* ========================================
+   전체 배경색 & 기본 색상 오버라이드
+   ======================================== */
+
+/* 페이지 전체 배경 */
+.md-main {
+  background-color: var(--gh-canvas-default);
+}
+
+.md-content {
+  background-color: var(--gh-canvas-default);
+}
+
+/* 컨텐츠 컨테이너 */
+.md-content__inner {
+  color: var(--gh-fg-default);
+}
+
+/* Light 모드에서 강제 색상 적용 */
+[data-md-color-scheme="default"] {
+  --md-default-fg-color: var(--gh-fg-default);
+  --md-default-bg-color: var(--gh-canvas-default);
+  --md-code-fg-color: var(--gh-fg-default);
+  --md-code-bg-color: var(--gh-canvas-subtle);
+}
+
+/* Dark 모드 색상 */
+[data-md-color-scheme="slate"] {
+  --md-default-fg-color: var(--gh-fg-default);
+  --md-default-bg-color: var(--gh-canvas-default);
+  --md-code-fg-color: var(--gh-fg-default);
+  --md-code-bg-color: var(--gh-canvas-subtle);
+}

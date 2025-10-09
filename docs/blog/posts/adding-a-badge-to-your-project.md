@@ -10,19 +10,17 @@ categories:
   - General
 ---
 
-# Adding a :simple-materialformkdocs: badge to your project
-
-__You enjoy working with Material for MkDocs? Share the love! You can now add
+You enjoy working with Material for MkDocs? Share the love! You can now add
 a badge to your project's README, showing that your project is built with
-Material for MkDocs.__
+Material for MkDocs.
+
+<!-- more -->
 
 Material for MkDocs' logo was just added to [Simple Icons], which is used by
 [Shields.io] to include logos in badges. We generated a badge for you, which
 you can add to your project's README:
 
 [![Material for MkDocs][badge]](#usage)
-
-<!-- more -->
 
 ## Usage
 

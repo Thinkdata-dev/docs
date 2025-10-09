@@ -2,6 +2,7 @@
 date: 2021-09-13
 authors: [squidfunk]
 readtime: 15
+title: "Search: better, faster, smaller"
 description: >
   How we rebuilt client-side search, delivering a better user experience while
   making it faster and smaller at the same time
@@ -13,11 +14,11 @@ links:
   - insiders/how-to-sponsor.md
 ---
 
-# Search: better, faster, smaller
-
-__This is the story of how we managed to completely rebuild client-side search,
+This is the story of how we managed to completely rebuild client-side search,
 delivering a significantly better user experience while making it faster and
-smaller at the same time.__
+smaller at the same time.
+
+<!-- more -->
 
 The [search] of Material for MkDocs is by far one of its best and most-loved
 assets: [multilingual], [offline-capable], and most importantly: _all
@@ -28,8 +29,6 @@ there's still some room for improvement, which is why we rebuilt the search
 plugin and integration from the ground up. This article shines some light on the
 internals of the new search, why it's much more powerful than the previous
 version, and what's about to come.
-
-<!-- more -->
 
 _The next section discusses the architecture and issues of the current search
 implementation. If you immediately want to learn what's new, skip to the

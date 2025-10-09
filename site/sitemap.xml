@@ -2,110 +2,170 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.thinkdata.dev/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.thinkdata.dev/blog/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
-         <loc>https://docs.thinkdata.dev/blog/2025/10/08/python-%EB%8D%B0%EC%BD%94%EB%A0%88%EC%9D%B4%ED%84%B0-%EC%99%84%EB%B2%BD-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-%EC%8B%A4%EB%AC%B4%EC%97%90%EC%84%9C-%EB%B0%94%EB%A1%9C-%EC%93%B0%EB%8A%94-5%EA%B0%80%EC%A7%80-%ED%8C%A8%ED%84%B4/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <loc>https://docs.thinkdata.dev/blog/tags/</loc>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
-         <loc>https://docs.thinkdata.dev/blog/2025/10/08/python-%EB%8D%B0%EC%BD%94%EB%A0%88%EC%9D%B4%ED%84%B0-%EC%99%84%EB%B2%BD-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-%EC%8B%A4%EC%A0%84-%EC%98%88%EC%A0%9C%EB%A1%9C-%EB%B0%B0%EC%9A%B0%EB%8A%94-%ED%99%9C%EC%9A%A9%EB%B2%95/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <loc>https://docs.thinkdata.dev/blog/%EC%B4%88%EB%B3%B4%EC%9E%90%EB%A5%BC-%EC%9C%84%ED%95%9C-python-%EA%B8%B0%EC%B4%88-%EB%B3%80%EC%88%98%EC%99%80-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%83%80%EC%9E%85-%EC%99%84%EB%B2%BD-%EA%B0%80%EC%9D%B4%EB%93%9C/</loc>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
-         <loc>https://docs.thinkdata.dev/blog/2023/11/30/adding-a-badge-to-your-project/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <loc>https://docs.thinkdata.dev/blog/%EC%B4%88%EB%B3%B4%EC%9E%90%EB%A5%BC-%EC%9C%84%ED%95%9C-python-%EC%9E%85%EB%AC%B8-%EA%B0%80%EC%9D%B4%EB%93%9C/</loc>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
-         <loc>https://docs.thinkdata.dev/blog/2022/09/12/blog-support-just-landed/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <loc>https://docs.thinkdata.dev/blog/%EC%B4%88%EB%B3%B4%EC%9E%90%EB%A5%BC-%EC%9C%84%ED%95%9C-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EA%B8%B0%EC%B4%88-%EB%B3%80%EC%88%98%EC%99%80-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%83%80%EC%9E%85-%EC%99%84%EB%B2%BD-%EA%B0%80%EC%9D%B4%EB%93%9C/</loc>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
-         <loc>https://docs.thinkdata.dev/blog/2022/05/05/chinese-search-support/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <loc>https://docs.thinkdata.dev/blog/ai-%EC%83%9D%EC%84%B1-%ED%8F%AC%EC%8A%A4%ED%8A%B8---%EC%A0%9C%EB%AA%A9-%ED%99%95%EC%9D%B8-%ED%95%84%EC%9A%94/</loc>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
-         <loc>https://docs.thinkdata.dev/blog/2021/09/26/excluding-content-from-search/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <loc>https://docs.thinkdata.dev/blog/json-%ED%8C%8C%EC%8B%B1-%EC%8B%A4%ED%8C%A8/</loc>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
-         <loc>https://docs.thinkdata.dev/blog/2023/09/22/using-git-sparse-checkout-for-faster-documentation-builds/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <loc>https://docs.thinkdata.dev/blog/python-%EB%8D%B0%EC%BD%94%EB%A0%88%EC%9D%B4%ED%84%B0-%EC%99%84%EB%B2%BD-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-%EC%8B%A4%EB%AC%B4%EC%97%90%EC%84%9C-%EB%B0%94%EB%A1%9C-%EC%93%B0%EB%8A%94-5%EA%B0%80%EC%A7%80-%ED%8C%A8%ED%84%B4/</loc>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
-         <loc>https://docs.thinkdata.dev/blog/2021/09/13/search-better-faster-smaller/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <loc>https://docs.thinkdata.dev/blog/python-%EB%8D%B0%EC%BD%94%EB%A0%88%EC%9D%B4%ED%84%B0-%EC%99%84%EB%B2%BD-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-%EC%8B%A4%EC%A0%84-%EC%98%88%EC%A0%9C%EB%A1%9C-%EB%B0%B0%EC%9A%B0%EB%8A%94-%ED%99%9C%EC%9A%A9%EB%B2%95/</loc>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
-         <loc>https://docs.thinkdata.dev/blog/2023/10/02/sunsetting-gitter-towards-efficient-community-engagement/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <loc>https://docs.thinkdata.dev/blog/rest-api-vs-graphql-%EC%96%B4%EB%96%A4-%EA%B2%83%EC%9D%84-%EC%84%A0%ED%83%9D%ED%95%B4%EC%95%BC-%ED%95%A0%EA%B9%8C/</loc>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
-         <loc>https://docs.thinkdata.dev/blog/2021/12/27/the-past-present-and-future/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <loc>https://docs.thinkdata.dev/blog/rest-api-%EC%84%A4%EA%B3%84-%EC%99%84%EB%B2%BD-%EA%B0%80%EC%9D%B4%EB%93%9C-%EC%8B%A4%EB%AC%B4%EC%97%90%EC%84%9C-%EB%B0%94%EB%A1%9C-%EC%93%B0%EB%8A%94-%EB%B2%A0%EC%8A%A4%ED%8A%B8-%ED%94%84%EB%9E%99%ED%8B%B0%EC%8A%A4/</loc>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
-         <loc>https://docs.thinkdata.dev/blog/2024/08/19/how-were-transforming-material-for-mkdocs/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <loc>https://docs.thinkdata.dev/blog/%EB%94%94%EB%B2%84%EA%B9%85-%EC%A4%91---console-%ED%99%95%EC%9D%B8-%ED%95%84%EC%9A%94/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/blog/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%A5%BC-%EC%9C%84%ED%95%9C-css-grid-%EC%99%84%EB%B2%BD-%EA%B0%80%EC%9D%B4%EB%93%9C/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/blog/adding-a-badge-to-your-project/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/blog/blog-support-just-landed/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/blog/chinese-search-support/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/blog/excluding-content-from-search/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/blog/using-git-sparse-checkout-for-faster-documentation-builds/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/blog/search-better-faster-smaller/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/blog/sunsetting-gitter-towards-efficient-community-engagement/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/blog/the-past-present-and-future/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/blog/how-were-transforming-material-for-mkdocs/</loc>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.thinkdata.dev/favorites/database/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.thinkdata.dev/favorites/write/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.thinkdata.dev/blog/archive/2025/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.thinkdata.dev/blog/archive/2024/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.thinkdata.dev/blog/archive/2023/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.thinkdata.dev/blog/archive/2022/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.thinkdata.dev/blog/archive/2021/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/blog/category/frontend/</loc>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.thinkdata.dev/blog/category/technology/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/blog/category/%EC%9B%B9%EA%B0%9C%EB%B0%9C/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/blog/category/%EB%B0%B1%EC%97%94%EB%93%9C/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/blog/category/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/</loc>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.thinkdata.dev/blog/category/general/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.thinkdata.dev/blog/category/build/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.thinkdata.dev/blog/category/performance/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.thinkdata.dev/blog/category/blog/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.thinkdata.dev/blog/category/search/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.thinkdata.dev/blog/page/2/</loc>
-         <lastmod>2025-10-08</lastmod>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/blog/archive/2025/page/2/</loc>
+         <lastmod>2025-10-09</lastmod>
     </url>
 </urlset>

@@ -22,7 +22,10 @@
 jinja2~=3.0
 markdown~=3.2
 mkdocs~=1.6
-mkdocs-material-extensions~=1.3
+# The official Material for MkDocs package provides the `material` module
+# used by the theme and extensions.
+mkdocs-material~=9.0
+mkdocs-minify-plugin~=0.7
 pygments~=2.16
 pymdown-extensions~=10.2
 

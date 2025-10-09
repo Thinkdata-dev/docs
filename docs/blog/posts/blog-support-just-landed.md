@@ -1,6 +1,7 @@
 ---
 date: 2022-09-12
 authors: [squidfunk]
+title: Blog support just landed
 description: >
   Our new blog is built with the brand new built-in blog plugin. You can build
   a blog alongside your documentation or standalone
@@ -11,11 +12,11 @@ links:
   - plugins/blog.md
 ---
 
-# Blog support just landed
-
-__Hey there! You're looking at our new blog, built with the brand new
+Hey there! You're looking at our new blog, built with the brand new
 [built-in blog plugin]. With this plugin, you can easily build a blog alongside
-your documentation or standalone.__
+your documentation or standalone.
+
+<!-- more -->
 
 Proper support for blogging, as requested by many users over the past few years,
 was something that was desperately missing from Material for MkDocs' feature set.
@@ -24,8 +25,6 @@ obvious whether MkDocs could be extended in a way to allow for blogging as we
 know it from [Jekyll] and friends. The [built-in blog plugin] proves that it is,
 after all, possible to build a blogging engine on top of MkDocs, in order to
 create a technical blog alongside your documentation, or as the main thing.
-
-<!-- more -->
 
 _This article explains how to build a standalone blog with Material for MkDocs.
 If you want to build a blog alongside your documentation, please refer to
