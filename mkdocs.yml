@@ -47,12 +47,9 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: 라이트 모드로 전환
-  font:
-    text: Inter
-    code: Fira Code
+  font: false  # 로컬 폰트 사용 (extra.css에서 정의)
   favicon: assets/favicon.png
-  icon:
-    logo: logo    
+  logo: assets/logo.svg    
 # Plugins
 plugins:
   - blog:

@@ -4,6 +4,50 @@
  */
 
 /* ========================================
+   폰트 정의 - Inter 로컬 폰트
+   ======================================== */
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/Inter-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../assets/fonts/Inter-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../assets/fonts/Inter-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../assets/fonts/Inter-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/Inter-Italic.woff2') format('woff2');
+}
+
+/* ========================================
    GitHub Design System - 색상 변수
    ======================================== */
 
@@ -458,107 +502,210 @@ article .md-tag:hover,
 .md-header__button {
   border-radius: 8px;
   transition: all 0.2s ease;
+  background-color: transparent;
 }
 
-.md-header__button:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+/* 데스크톱에서만 호버 효과 */
+@media screen and (min-width: 60em) {
+  .md-header__button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  [data-md-color-scheme="slate"] .md-header__button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
 }
 
-[data-md-color-scheme="slate"] .md-header__button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+/* 모바일에서 버튼 배경 제거 */
+@media screen and (max-width: 59.9375em) {
+  /* 모든 헤더 버튼의 배경과 상태 레이어 제거 */
+  .md-header__button,
+  .md-header__button.md-icon,
+  label.md-header__button,
+  label.md-header__button.md-icon,
+  .md-header__button::before,
+  .md-header__button::after,
+  .md-header__button.md-icon::before,
+  .md-header__button.md-icon::after {
+    background-color: transparent !important;
+    background: none !important;
+    box-shadow: none !important;
+  }
+
+  /* 모든 상태에서 배경 제거 */
+  .md-header__button:hover,
+  .md-header__button:focus,
+  .md-header__button:active,
+  .md-header__button.md-icon:hover,
+  .md-header__button.md-icon:focus,
+  .md-header__button.md-icon:active {
+    background-color: transparent !important;
+    background: none !important;
+  }
+
+  /* 탭 시 아주 약한 피드백만 */
+  .md-header__button:active::before,
+  .md-header__button.md-icon:active::before {
+    background-color: rgba(0, 0, 0, 0.03) !important;
+  }
+
+  [data-md-color-scheme="slate"] .md-header__button:active::before,
+  [data-md-color-scheme="slate"] .md-header__button.md-icon:active::before {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+  }
+
+  /* 검색 아이콘 특별 처리 - 모든 상태 */
+  label.md-header__button[for="__search"],
+  label.md-header__button[for="__search"]::before,
+  label.md-header__button[for="__search"]::after,
+  label.md-header__button[for="__search"]:hover,
+  label.md-header__button[for="__search"]:focus,
+  label.md-header__button[for="__search"]:active {
+    background-color: transparent !important;
+    background: none !important;
+    box-shadow: none !important;
+  }
 }
 
 /* ========================================
    검색 박스 - 깔끔한 스타일
    ======================================== */
 
-/* 검색 폼 컨테이너 */
-.md-header .md-search__form {
-  background-color: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  overflow: visible !important;
+/* 데스크톱에서만 커스텀 검색 스타일 적용 */
+@media screen and (min-width: 60em) {
+  /* 검색 폼 컨테이너 */
+  .md-header .md-search__form {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+
+  /* 헤더 내 검색창 */
+  .md-header .md-search__input {
+    background-color: rgba(0, 0, 0, 0.02) !important;
+    border: 1px solid rgba(0, 0, 0, 0.15) !important;
+    border-radius: 6px !important;
+    color: #000000 !important;
+    padding: 0 12px 0 40px !important;
+    font-size: 14px !important;
+    height: 36px !important;
+    line-height: normal !important;
+    box-sizing: border-box !important;
+  }
+
+  .md-header .md-search__input:hover {
+    background-color: rgba(0, 0, 0, 0.12) !important;
+    border-color: rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .md-header .md-search__input:focus {
+    background-color: #ffffff !important;
+    border-color: #0969da !important;
+    box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.1) !important;
+    outline: none !important;
+  }
+
+  .md-header .md-search__input::placeholder {
+    color: #666666 !important;
+    opacity: 1 !important;
+  }
+
+  /* 돋보기 아이콘 (왼쪽) */
+  .md-header .md-search__icon[for="__search"] {
+    color: #666666 !important;
+    opacity: 1 !important;
+    left: 10px !important;
+    width: 20px !important;
+    height: 20px !important;
+    display: block !important;
+  }
+
+  .md-header .md-search__icon[for="__search"] svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  /* 우측 검색어 삭제 버튼 표시 */
+  .md-header .md-search__options {
+    display: flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+  }
+
+  /* 삭제 버튼 스타일 */
+  .md-header .md-search__icon[type="reset"] {
+    color: #666666 !important;
+    opacity: 0.7 !important;
+    width: 20px !important;
+    height: 20px !important;
+    display: inline-block !important;
+  }
+
+  .md-header .md-search__icon[type="reset"]:hover {
+    opacity: 1 !important;
+  }
+
+  [data-md-color-scheme="slate"] .md-header .md-search__icon[type="reset"] {
+    color: #888888 !important;
+  }
+
+  /* 다른 불필요한 아이콘들은 숨김 (키보드 단축키 등) */
+  .md-header .md-search__suggest {
+    display: none !important;
+  }
+
+  .md-search-result__article::before {
+    display: none !important;
+  }
+
+  /* Dark 모드 검색창 */
+  [data-md-color-scheme="slate"] .md-header .md-search__input {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+  }
+
+  [data-md-color-scheme="slate"] .md-header .md-search__input:hover {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+  }
+
+  [data-md-color-scheme="slate"] .md-header .md-search__input:focus {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    border-color: #58a6ff !important;
+    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.2) !important;
+  }
+
+  [data-md-color-scheme="slate"] .md-header .md-search__input::placeholder {
+    color: #888888 !important;
+  }
+
+  [data-md-color-scheme="slate"] .md-header .md-search__icon[for="__search"],
+  [data-md-color-scheme="slate"] .md-header .md-search__icon {
+    color: #888888 !important;
+  }
 }
 
-/* 헤더 내 검색창 */
-.md-header .md-search__input {
-  background-color: rgba(0, 0, 0, 0.02) !important;
-  border: 1px solid rgba(0, 0, 0, 0.15) !important;
-  border-radius: 6px !important;
-  color: #000000 !important;
-  padding: 0 12px 0 40px !important;
-  font-size: 14px !important;
-  height: 36px !important;
-  line-height: normal !important;
-  box-sizing: border-box !important;
-}
+/* 모바일에서 검색 버튼이 정상 작동하도록 보장 */
+@media screen and (max-width: 59.9375em) {
+  .md-search {
+    z-index: 2;
+  }
 
-.md-header .md-search__input:hover {
-  background-color: rgba(0, 0, 0, 0.12) !important;
-  border-color: rgba(0, 0, 0, 0.2) !important;
-}
+  .md-header__button.md-icon {
+    pointer-events: auto;
+    cursor: pointer;
+  }
 
-.md-header .md-search__input:focus {
-  background-color: #ffffff !important;
-  border-color: #0969da !important;
-  box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.1) !important;
-  outline: none !important;
-}
+  /* 모바일에서 검색 오버레이가 정상적으로 표시되도록 */
+  .md-search__overlay {
+    z-index: 1;
+  }
 
-.md-header .md-search__input::placeholder {
-  color: #666666 !important;
-  opacity: 1 !important;
-}
-
-/* 돋보기 아이콘 (왼쪽) */
-.md-header .md-search__icon[for="__search"] {
-  color: #666666 !important;
-  opacity: 1 !important;
-  left: 10px !important;
-  width: 20px !important;
-  height: 20px !important;
-  display: block !important;
-}
-
-.md-header .md-search__icon[for="__search"] svg {
-  width: 20px !important;
-  height: 20px !important;
-}
-
-/* 우측 아이콘들 숨김 */
-.md-search__options {
-  display: none !important;
-}
-
-.md-search-result__article::before {
-  display: none !important;
-}
-
-/* Dark 모드 검색창 */
-[data-md-color-scheme="slate"] .md-header .md-search__input {
-  background-color: rgba(255, 255, 255, 0.1) !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
-  color: #ffffff !important;
-}
-
-[data-md-color-scheme="slate"] .md-header .md-search__input:hover {
-  background-color: rgba(255, 255, 255, 0.15) !important;
-  border-color: rgba(255, 255, 255, 0.3) !important;
-}
-
-[data-md-color-scheme="slate"] .md-header .md-search__input:focus {
-  background-color: rgba(255, 255, 255, 0.12) !important;
-  border-color: #58a6ff !important;
-  box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.2) !important;
-}
-
-[data-md-color-scheme="slate"] .md-header .md-search__input::placeholder {
-  color: #888888 !important;
-}
-
-[data-md-color-scheme="slate"] .md-header .md-search__icon[for="__search"],
-[data-md-color-scheme="slate"] .md-header .md-search__icon {
-  color: #888888 !important;
+  .md-search__inner {
+    z-index: 2;
+  }
 }
 
 /* 검색 오버레이 전체 */
@@ -574,7 +721,8 @@ article .md-tag:hover,
   border: 1px solid var(--vercel-border);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
   border-radius: 12px;
-  overflow: hidden;
+  overflow: visible;
+  position: relative;
 }
 
 [data-md-color-scheme="slate"] .md-search__form {
@@ -662,7 +810,7 @@ article .md-tag:hover,
   border-radius: 12px 12px 0 0;
   color: var(--vercel-header-active);
   font-size: 16px;
-  padding: 18px 20px 18px 48px;
+  padding: 18px 50px 18px 48px;
   height: auto;
 }
 
@@ -676,8 +824,8 @@ article .md-tag:hover,
   opacity: 0.5;
 }
 
-/* 검색 아이콘 (확대된 상태) */
-.md-search__inner .md-search__icon {
+/* 검색 아이콘 (확대된 상태) - 돋보기 아이콘 */
+.md-search__inner .md-search__icon[for="__search"] {
   color: var(--vercel-header-fg);
   opacity: 0.6;
   left: 16px;
@@ -686,9 +834,46 @@ article .md-tag:hover,
   display: block;
 }
 
-.md-search__inner .md-search__icon svg {
+.md-search__inner .md-search__icon[for="__search"] svg {
   width: 22px;
   height: 22px;
+}
+
+/* 검색 옵션 영역 (확대된 상태) - 삭제 버튼 등 */
+.md-search__inner .md-search__options {
+  display: flex !important;
+  align-items: center;
+  gap: 4px;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* 삭제 버튼 (확대된 상태) */
+.md-search__inner .md-search__icon[type="reset"] {
+  color: var(--vercel-header-fg);
+  opacity: 0.7;
+  width: 22px;
+  height: 22px;
+  display: inline-block !important;
+  position: static;
+  cursor: pointer;
+}
+
+.md-search__inner .md-search__icon[type="reset"]:hover {
+  opacity: 1;
+  color: var(--vercel-header-active);
+}
+
+.md-search__inner .md-search__icon[type="reset"] svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* 키보드 단축키 힌트 숨김 */
+.md-search__inner .md-search__suggest {
+  display: none !important;
 }
 
 /* 스크롤바 */
