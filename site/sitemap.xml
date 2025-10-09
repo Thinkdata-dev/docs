@@ -5,6 +5,14 @@
          <lastmod>2025-10-09</lastmod>
     </url>
     <url>
+         <loc>https://docs.thinkdata.dev/creating-your-site/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/publishing-your-site/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
          <loc>https://docs.thinkdata.dev/blog/</loc>
          <lastmod>2025-10-09</lastmod>
     </url>
@@ -93,11 +101,83 @@
          <lastmod>2025-10-09</lastmod>
     </url>
     <url>
+         <loc>https://docs.thinkdata.dev/changelog/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
          <loc>https://docs.thinkdata.dev/favorites/database/</loc>
          <lastmod>2025-10-09</lastmod>
     </url>
     <url>
          <loc>https://docs.thinkdata.dev/favorites/write/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/insiders/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/insiders/how-to-sponsor/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/plugins/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/plugins/blog/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/plugins/optimize/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/plugins/privacy/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/plugins/projects/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/plugins/search/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/reference/code-blocks/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/reference/diagrams/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/setup/adding-a-git-repository/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/setup/changing-the-colors/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/setup/setting-up-a-blog/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/setup/setting-up-site-analytics/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/setup/setting-up-social-cards/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/setup/setting-up-the-footer/</loc>
+         <lastmod>2025-10-09</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.thinkdata.dev/setup/extensions/python-markdown-extensions/</loc>
          <lastmod>2025-10-09</lastmod>
     </url>
     <url>
