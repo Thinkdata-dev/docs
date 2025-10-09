@@ -1085,3 +1085,8 @@ article .md-tag:hover,
   --md-code-fg-color: var(--gh-fg-default);
   --md-code-bg-color: var(--gh-canvas-subtle);
 }
+
+/* ========================================
+   Copyright 자동 년도 업데이트
+   ======================================== */
+

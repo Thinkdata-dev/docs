@@ -4,7 +4,7 @@ site_author: Hokyu Wee
 site_description: >-
   thinkdata 기술 블로그 및 문서
 
-copyright: Copyright &copy; 2024 - 2024 thinkdata
+copyright: Copyright &copy; 2024 thinkdata
 
 theme:
   name: material
@@ -89,6 +89,9 @@ extra:
 
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/copyright.js
 
 # Extensions
 markdown_extensions:
