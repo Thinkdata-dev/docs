@@ -159,16 +159,47 @@ article.md-post {
   padding: 0;
   margin-bottom: 48px !important;
   transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 날짜/메타 정보를 하단으로 이동 */
+article.md-post .md-post__header {
+  order: 2;
+  margin-top: 4px;
+}
+
+article.md-post .md-post__content {
+  order: 1;
 }
 
 article.blog-post:hover,
 article.md-post:hover {
-  /* 호버 효과 제거 */
+  opacity: 0.7;
 }
 
 [data-md-color-scheme="slate"] article.blog-post:hover,
 [data-md-color-scheme="slate"] article.md-post:hover {
-  /* 호버 효과 제거 */
+  opacity: 0.8;
+}
+
+/* 제목 링크를 카드 전체 영역으로 확장 */
+article.md-post h2 a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+/* 다른 링크들이 클릭 가능하도록 z-index 조정 */
+article.md-post .md-meta a {
+  position: relative;
+  z-index: 2;
 }
 
 /* 블로그 메타 정보 */
@@ -1285,12 +1316,9 @@ article .md-tag:hover,
    Continue Reading 링크 스타일
    ======================================== */
 
-/* "Continue reading" 링크 - 심플하고 세련된 디자인 */
+/* "Continue reading" 링크 숨기기 - 카드 전체가 클릭 가능하므로 불필요 */
 .md-post__action {
-  text-align: left;
-  margin-top: -0.5em;
-  position: relative;
-  z-index: 1;
+  display: none;
 }
 
 .md-post__action a {
