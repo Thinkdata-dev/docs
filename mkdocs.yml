@@ -167,7 +167,7 @@ not_in_nav: |
 nav:
   - Home: index.md
   - Tech:
-    - tech/index.md  - 
+    - tech/index.md
   - Data Finance:
     - data-finance/index.md
   - Investment:
