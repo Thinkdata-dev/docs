@@ -59,12 +59,6 @@ plugins:
       post_url_format: "{slug}"
       authors_file: "{blog}/.authors.yml"
   - blog:
-      blog_dir: data
-      blog_toc: true
-      post_date_format: full
-      post_url_format: "{slug}"
-      authors_file: "{blog}/.authors.yml"
-  - blog:
       blog_dir: data-finance
       blog_toc: true
       post_date_format: full
@@ -173,9 +167,7 @@ not_in_nav: |
 nav:
   - Home: index.md
   - Tech:
-    - tech/index.md
-  - Data:
-    - data/index.md
+    - tech/index.md  - 
   - Data Finance:
     - data-finance/index.md
   - Investment:
