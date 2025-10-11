@@ -151,27 +151,28 @@ html {
    ======================================== */
 
 /* 블로그 포스트 카드 */
-.md-typeset article.blog-post {
+article.blog-post,
+article.md-post {
   background: transparent;
-  border: 1px solid var(--vercel-border);
-  border-radius: 12px;
-  padding: 32px;
-  margin-bottom: 24px;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin-bottom: 48px !important;
   transition: all 0.2s ease;
 }
 
-.md-typeset article.blog-post:hover {
-  border-color: var(--vercel-header-active);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
-  transform: translateY(-2px);
+article.blog-post:hover,
+article.md-post:hover {
+  /* 호버 효과 제거 */
 }
 
-[data-md-color-scheme="slate"] .md-typeset article.blog-post:hover {
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+[data-md-color-scheme="slate"] article.blog-post:hover,
+[data-md-color-scheme="slate"] article.md-post:hover {
+  /* 호버 효과 제거 */
 }
 
 /* 블로그 메타 정보 */
-.md-typeset .blog-post .md-meta {
+.md-post .md-meta {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
@@ -1278,4 +1279,62 @@ article .md-tag:hover,
 /* ========================================
    Copyright 자동 년도 업데이트
    ======================================== */
+
+
+/* ========================================
+   Continue Reading 링크 스타일
+   ======================================== */
+
+/* "Continue reading" 링크 - 심플하고 세련된 디자인 */
+.md-post__action {
+  text-align: left;
+  margin-top: -0.5em;
+  position: relative;
+  z-index: 1;
+}
+
+.md-post__action a {
+  color: var(--vercel-header-fg) !important;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  background: none;
+  padding: 0 8px 0 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  background-color: var(--gh-canvas-default);
+}
+
+[data-md-color-scheme="slate"] .md-post__action a {
+  background-color: var(--gh-canvas-default);
+}
+
+.md-post__action a:hover {
+  color: var(--vercel-header-active) !important;
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+/* 화살표 추가 (::after 사용) */
+.md-post__action a::after {
+  content: "→";
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.md-post__action a:hover::after {
+  transform: translateX(2px);
+}
+
+/* Dark 모드 */
+[data-md-color-scheme="slate"] .md-post__action a {
+  color: var(--vercel-header-fg) !important;
+}
+
+[data-md-color-scheme="slate"] .md-post__action a:hover {
+  color: var(--vercel-header-active) !important;
+}
 
